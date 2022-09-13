@@ -3,14 +3,13 @@ import { Link } from "react-router-dom";
 import React from "react";
 import { ReactComponent as Decoration } from "./../assets/Decoration.svg";
 import { SimpleStepColumn } from "./simple_steps/SimpleStepColumn";
-import { HashScroll } from "react-hash-scroll";
+
 
 //styles
 import "./../scss/components_scss/SimpleSteps.scss";
 
 export default function SimpleSteps() {
   return (
-    <HashScroll hash="hash-section-simplesteps">
     <div className="simple-steps-container" id="scroll-simple-steps">
       <div className="simple-steps-first-container">
         <div>
@@ -54,6 +53,5 @@ export default function SimpleSteps() {
         </div>
       </div>
     </div>
-    </HashScroll>
   );
 }

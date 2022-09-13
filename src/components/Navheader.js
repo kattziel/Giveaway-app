@@ -28,9 +28,7 @@ return (
           <div className="page-menu">
             <ul>
               <li>Start</li>
-              <Link to="/hash-scroll#hash-section-simplesteps">
               <li>O co chodzi?</li>
-              </Link>
               <li>O nas</li>
               <li>Fundacja i organizacje</li>
               <li>Kontakt</li>
