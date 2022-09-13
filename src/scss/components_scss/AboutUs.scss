@@ -1,0 +1,42 @@
+@import "../settings/colors";
+@import "../settings/fonts";
+
+.about-us-container {
+    display: flex;
+    background-color: #F0F1F1;
+    max-width: 100%;
+    overflow: hidden;
+}
+.about-us-content {
+    background-color: #F0F1F1;
+    max-width: 50%;
+}
+
+.about-us-header {
+   margin-top: 250px;
+   margin-bottom: 47px;
+   font-size: 40px;
+}
+
+.about-us-text {
+    padding-top: 87px;
+    padding-bottom: 50px;
+    margin-right: 150px;
+    margin-left: 150px;
+    font-size: 29px;
+}
+
+.about-us-signature {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 150px;
+}
+
+.about-us-image {
+    max-width: 50%;
+    float: right;
+}
+
+// 87 od dekoracji do tekstu
+// 67 od tekstu do podpisu
+// 254 podpis do dołu

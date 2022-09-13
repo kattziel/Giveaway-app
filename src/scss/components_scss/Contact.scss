@@ -1,0 +1,94 @@
+@import "../settings/colors";
+@import "../settings/fonts";
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  overflow: hidden;
+  background-color: white;
+  position: relative;
+}
+
+.contact-form-section {
+  width: 900px;
+  z-index: 100;
+  padding-top: 250px;
+}
+
+.image-section {
+  width: 50%;
+  height: 50%;
+  z-index: 1;
+}
+
+.contact-form-header div {
+  font-size: 45px;
+  font-family: $font-base;
+  padding-bottom: 50px;
+}
+
+.contact-form {
+  padding-top: 100px;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+.contact-data {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
+}
+
+.contact-data-personal {
+  text-align: left;
+}
+
+.contact-message {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  justify-content: left;
+}
+
+#submit-text {
+  font-size: 17px;
+  font-family: $font-base;
+  width: 280px;
+  height: 40px;
+  display:flex;
+  justify-content: space-between;
+  border: none;
+  border-bottom: 1px solid lightgrey;
+  margin-top: 10px;
+  background: #fefefd;
+}
+
+::placeholder {
+    color: lightgray;
+    font-size: 17px;
+    font-family: $font-base;
+    white-space:pre-line;
+    text-align: justify;
+
+
+}
+
+#submit-message {
+    color: $color-darkgrey;
+    font-size: 17px;
+    font-family: $font-base;
+    width: 600px;
+    height: 300px;
+    display:flex;
+    justify-content: space-between;
+    border: none;
+    // border-bottom: 1px solid lightgrey;
+    margin-top: 10px;
+    background: fefefd;
+}
+
+.image-section img {
+  opacity: 0.2;
+}

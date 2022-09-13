@@ -1,0 +1,119 @@
+@import "../settings/colors";
+@import "../settings/fonts";
+
+.navheader-container {
+    display: flex;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.img-section {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 50%;
+    overflow: hidden;
+}
+
+.content-section {
+    background-color: white;
+    max-width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-right: 40px;
+}
+
+.navheader-navigation {
+    display: flex;
+    flex-direction: column;
+    // margin-right: 50px;
+}
+
+.user-menu {
+    // display: flex;
+    padding: 40px;
+    padding-bottom: 0px;
+}
+
+.user-menu ul {
+    text-decoration: none;
+    border-bottom: none;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 580px;
+    font-family: $font-base;
+    color: $color-grey;
+    font-size: 18px;
+}
+
+.user-menu li {
+    padding: 10px;
+    color: $color-grey;
+    text-decoration: none;
+    // border: 1px solid rgb(243, 200, 90);
+}
+
+.page-menu {
+    padding: 40px;
+    padding-top: 10px;
+    padding-bottom: 150px;
+}
+
+.page-menu ul {
+    display: flex;
+    justify-content: space-between;
+    font-family: $font-base;
+    color: $color-grey;
+    font-size: 22px;
+}
+
+.page-menu li {
+    padding: 20px;
+    // border: 1px solid grey;
+}
+
+.header p {
+    font-family: $font-base;
+    font-size: 40px;
+    color: $color-darkgrey;
+    padding-bottom: 20px;
+}
+
+.decoration {
+    padding-top: 25px;
+    padding-bottom: 40px;
+}
+
+.nav-buttons {
+    // padding-top: 50px;
+    // padding-bottom: 70px;
+    // font-family: $font-base;
+    // font-size: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    // align-items: center;
+    // color: $color-darkgrey;
+    // background-color: white;
+}
+
+.main-section {
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.nav-btn {
+    font-size: 37px;
+    font-family: $font-base;
+    color: $color-grey;
+    border: 1px solid $color-grey;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    align-items: center;
+    width: 280px;
+    background-color: white;
+    font-weight: 200px;
+    padding-right: 30px;
+    padding-left: 30px;
+
+    // flex: 1;
+}
