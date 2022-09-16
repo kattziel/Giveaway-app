@@ -11,12 +11,16 @@ export default function Login() {
         <div className="login-navigation">
           <div className="login-user-menu">
             <ul>
+            <li>
               <Link to="../login">
-                <li>Zaloguj się</li>
+                Zaloguj się
               </Link>
+            </li>
+            <li>
               <Link to="../signup">
-                <li>Załóz konto</li>
+                Zarejestruj się
               </Link>
+            </li>
             </ul>
           </div>
           <div className="page-menu">
@@ -42,57 +46,31 @@ export default function Login() {
         <div className="login-textarea">
           <div className="login-textarea-content">
             Email
-            <textarea
+            <input
               id=""
               type="text"
               className="login-form-text"
-              ></textarea>
+              ></input>
           </div>
           <div className="login-textarea-content">
             Hasło
-            <textarea
+            <input
               id=""
               type="password"
               className="login-form-text"
-              ></textarea>
+              ></input>
           </div>
         </div>
 
         <div className="login-buttons">
+          <btn className="login-btn">
           <Link to="../signup">
-            <btn className="login-btn">Załóz konto</btn>
+            Zarejestruj się
           </Link>
+          </btn>
           <btn className="login-btn">Zaloguj się</btn>
         </div>
       </div>
     </div>
   );
 }
-
-// <div className="login-container">
-//   <div className="login-panel-section">
-//     <div className="login-navigation-section">
-//       <div className="login-navigation">
-//         <div className="login-user-menu">
-//           <ul>
-//             <Link to="login">
-//               <li>Zaloguj się</li>
-//             </Link>
-//             <Link to="signup">
-//               <li>Załóz konto</li>
-//             </Link>
-//           </ul>
-//         </div>
-//         <div className="page-menu">
-//           <ul>
-//             <li>Start</li>
-//             <li>O co chodzi?</li>
-//             <li>O nas</li>
-//             <li>Fundacja i organizacje</li>
-//             <li>Kontakt</li>
-//           </ul>
-//         </div>
-//       </div>
-//     </div>
-//   </div>
-// </div>

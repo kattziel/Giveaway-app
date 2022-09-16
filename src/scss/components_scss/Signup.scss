@@ -121,6 +121,12 @@
     padding: 0px 15px 0px 15px;
 }
 
+.signup-buttons btn a {
+    text-decoration:none;
+    border: none;
+    color: $color-grey;
+}
+
 .signup-btn {
     // border: 1px solid $color-grey;
     padding: 25px;
@@ -129,4 +135,10 @@
     font-family: $font-base;
     color: $color-grey;
     font-size: 20px;
+}
+
+.signup-user-menu ul a {
+    text-decoration:none;
+    border: none;
+    color: $color-grey;
 }

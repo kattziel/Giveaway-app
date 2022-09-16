@@ -11,12 +11,16 @@ export default function Signup() {
         <div className="signup-navigation">
           <div className="signup-user-menu">
             <ul>
+              <li>
               <Link to="../login">
-                <li>Zaloguj się</li>
+              Zaloguj się
               </Link>
+              </li>
+              <li>
               <Link to="../signup">
-                <li>Załóz konto</li>
+               Zarejestruj się
               </Link>
+              </li>
             </ul>
           </div>
           <div className="page-menu">
@@ -33,7 +37,7 @@ export default function Signup() {
 
       <div className="signup-logging-section">
         <div className="signup-header">
-          ZAŁÓZ KONTO
+          ZAREJESTRUJ SIĘ
           <div>
             <Decoration />
           </div>
@@ -42,35 +46,37 @@ export default function Signup() {
         <div className="signup-textarea">
           <div className="signup-textarea-content">
             Email
-            <textarea
+            <input
               id=""
               type="text"
               className="signup-form-text"
-              ></textarea>
+              ></input>
           </div>
           <div className="signup-textarea-content">
             Hasło
-            <textarea
+            <input
               id=""
               type="password"
               className="signup-form-text"
-              ></textarea>
+              ></input>
           </div>
           <div className="signup-textarea-content">
             Powtórz hasło
-            <textarea
+            <input
               id=""
               type="password"
               className="signup-form-text"
-              ></textarea>
+              ></input>
           </div>
         </div>
 
         <div className="signup-buttons">
-          <Link to="../signup">
-            <btn className="signup-btn">Zaloguj się</btn>
+          <btn className="signup-btn">
+          <Link to="../login">
+            Zaloguj się
           </Link>
-          <btn className="signup-btn">Załóz konto</btn>
+          </btn>
+          <btn className="signup-btn">Zarejestruj się</btn>
         </div>
       </div>
     </div>
