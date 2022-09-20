@@ -1,16 +1,16 @@
 //general
-import { Link } from "react-router-dom";
 import React from "react";
+import { Link } from "react-router-dom";
 import { ReactComponent as Decoration } from "./../assets/Decoration.svg";
-// import {ScrollLink as scroll} from "react-scroll";
 import { Link as ScrollLink } from "react-scroll";
+import { useAuth } from "../hooks/useAuth";
 
 //styles
 import "../scss/components_scss/Navheader.scss";
 
+//function
 export default function Navheader() {
-  // const anchor = document.querySelector("scroll-simple-steps");
-  // anchor.scrollIntoView({behavior: 'smooth', block: 'center'});
+  const auth = useAuth();
 
   return (
     <div className="navheader-container">
@@ -19,40 +19,6 @@ export default function Navheader() {
       </div>
 
       <div className="content-section">
-        <div className="navheader-navigation">
-          <div className="user-menu">
-            <ul>
-              <li>
-                <Link to="login">Zaloguj się</Link>
-              </li>
-              <li>
-                <Link to="signup">Zarejestruj się</Link>
-              </li>
-            </ul>
-          </div>
-          <div className="page-menu">
-            <ul>
-              <li>Start</li>
-              <li>
-                <ScrollLink
-                  activeClass="active"
-                  className="test1"
-                  to="test1"
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                  
-                >
-                  O co chodzi?
-                </ScrollLink>
-              </li>
-              <li>O nas</li>
-              <li>Fundacja i organizacje</li>
-              <li>Kontakt</li>
-            </ul>
-          </div>
-        </div>
-
         <div className="main-section">
           <div className="header">
             <p>Zacznij pomagać!</p>
@@ -62,9 +28,16 @@ export default function Navheader() {
             <Decoration />
           </div>
           <div className="nav-buttons">
-            <Link to="login">
-              <button className="nav-btn">ODDAJ RZECZY</button>
-            </Link>
+            {auth.user ? (
+              <Link to="form">
+                <button className="nav-btn">ODDAJ RZECZY</button>
+              </Link>
+            ) : (
+              <Link to="login">
+                <button className="nav-btn">ODDAJ RZECZY</button>
+              </Link>
+            )}
+
             <Link to="login">
               <button className="nav-btn">ZORGANIZUJ ZBIÓRKĘ</button>
             </Link>

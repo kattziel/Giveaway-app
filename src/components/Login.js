@@ -1,39 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ReactComponent as Decoration } from "./../assets/Decoration.svg";
-
+import {useState} from 'react';
+import {useAuth} from '../hooks/useAuth';
 import "../scss/components_scss/Login.scss";
 
 export default function Login() {
+
+  const [user, setUser] = useState('');
+  const auth = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    auth.login(user)
+    navigate('/');
+  }
+
   return (
     <div className="login-container">
-      <div className="login-navigation-section">
-        <div className="login-navigation">
-          <div className="login-user-menu">
-            <ul>
-            <li>
-              <Link to="../login">
-                Zaloguj się
-              </Link>
-            </li>
-            <li>
-              <Link to="../signup">
-                Zarejestruj się
-              </Link>
-            </li>
-            </ul>
-          </div>
-          <div className="page-menu">
-            <ul>
-              <li>Start</li>
-              <li>O co chodzi?</li>
-              <li>O nas</li>
-              <li>Fundacja i organizacje</li>
-              <li>Kontakt</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+
 
       <div className="login-logging-section">
         <div className="login-header">
@@ -50,6 +35,7 @@ export default function Login() {
               id=""
               type="text"
               className="login-form-text"
+              onChange={(e) => setUser(e.target.value)}
               ></input>
           </div>
           <div className="login-textarea-content">
@@ -68,7 +54,10 @@ export default function Login() {
             Zarejestruj się
           </Link>
           </btn>
-          <btn className="login-btn">Zaloguj się</btn>
+          <btn
+            className="login-btn"
+            onClick={handleLogin}
+            >Zaloguj się</btn>
         </div>
       </div>
     </div>

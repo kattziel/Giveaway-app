@@ -1,0 +1,203 @@
+@import "../settings/colors";
+@import "../settings/fonts";
+
+.form-header {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-header-content-section {
+  padding-top: 150px;
+  margin-right: 279px;
+}
+
+.header-div p {
+  text-align: center;
+  font: normal normal normal 38px/55px Open Sans;
+  letter-spacing: -0.76px;
+  color: #3c3c3c;
+  opacity: 1;
+}
+
+.decoration-div {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.form-header-steps-section-header {
+  text-align: center;
+  font: normal normal 300 40px/55px Open Sans;
+  letter-spacing: 0px;
+  color: #3c3c3c;
+  opacity: 1;
+}
+
+.rhombus-section {
+  padding-top: 50px;
+  display: flex;
+}
+
+.rhombus-parent {
+  width: 170px;
+  height: 170px;
+  // border: 1px solid blue;
+  position: relative;
+  padding: 10px;
+}
+
+.rhombus-child {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid lightgray;
+  transform: rotate(45deg);
+}
+
+.rhombus-child-number {
+  text-align: center;
+  font: normal normal 300 32px/27px Open Sans;
+  letter-spacing: 0px;
+  color: #3c3c3c;
+  opacity: 1;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5px;
+}
+
+.rhombus-child-text {
+  padding-top: 30px;
+}
+
+.rhombus-child-text p {
+  text-align: center;
+  font: normal normal 300 22px/27px Open Sans;
+  letter-spacing: 0px;
+  color: grey;
+  opacity: 1;
+}
+
+.form-details-padding {
+  padding: 50px, 683px, 50px, 141px;
+  background-color: #fad648;
+}
+
+.form-details-header {
+  text-align: left;
+  font: normal normal 600 36px/32px Open Sans;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  padding-top: 50px;
+  padding-left: 141px;
+}
+
+.form-details-content {
+  text-align: left;
+  font: normal normal normal 22px/30px Open Sans;
+  letter-spacing: 0px;
+  color: #3c3c3c;
+  opacity: 1;
+  padding-top: 6px;
+  padding-bottom: 50px;
+  padding-left: 141px;
+}
+
+.form-steps {
+  width: 100%;
+  height: 883px;
+  background-image: url("../../assets/Background-Form.jpg");
+}
+
+.form-steps-number {
+  text-align: left;
+  font: normal normal 300 24px/27px Open Sans;
+  letter-spacing: 0px;
+  color: #3c3c3c;
+  opacity: 1;
+  padding-left: 142px;
+  padding-top: 36px;
+  padding-bottom: 64px;
+}
+
+.form-steps-header {
+  text-align: left;
+  font: normal normal 600 36px/45px Open Sans;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  padding-left: 142px;
+  padding-bottom: 42px;
+}
+
+.form-steps-giveaway-options {
+  padding-left: 142px;
+  padding-bottom: 100px;
+}
+
+.form-steps-giveaway-things p {
+  text-align: left;
+  font: normal normal 300 24px/32px Open Sans;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  font-weight: 300;
+}
+
+.form-steps-button button {
+  display: flex;
+  margin-left: 142px;
+  padding: 23px;
+  padding-left: 63px;
+  padding-right: 63px;
+  text-align: left;
+  font: normal normal 300 24px/32px Open Sans;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 0.7;
+  background-color: none;
+}
+
+.form-steps-giveaway-picker {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-start;
+}
+
+.form-steps-giveaway-picker label {
+text-align: left;
+font: normal normal 300 24px/32px Open Sans;
+letter-spacing: 0px;
+color: #000000;
+opacity: 1;
+margin-bottom: 40px;
+display: flex;
+align-items: center;
+}
+
+.form-steps-giveaway-picker input[type="radio"] {
+    display: none;
+}
+// }
+
+// .form-steps-giveaway-picker label {
+// }
+
+.checkbox {
+   cursor: pointer;
+   display: flex;
+}
+
+.checkbox span {
+    height: 40px;
+    width: 40px;
+    // flex-shrink: 0;
+    // flex-basis: 60px;
+    border: 1px solid grey;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.checkbox input:checked + span {
+    background-color: #FAD648;
+}

@@ -7,34 +7,6 @@ import "../scss/components_scss/Signup.scss";
 export default function Signup() {
   return (
     <div className="signup-container">
-      <div className="signup-navigation-section">
-        <div className="signup-navigation">
-          <div className="signup-user-menu">
-            <ul>
-              <li>
-              <Link to="../login">
-              Zaloguj się
-              </Link>
-              </li>
-              <li>
-              <Link to="../signup">
-               Zarejestruj się
-              </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="page-menu">
-            <ul>
-              <li>Start</li>
-              <li>O co chodzi?</li>
-              <li>O nas</li>
-              <li>Fundacja i organizacje</li>
-              <li>Kontakt</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
       <div className="signup-logging-section">
         <div className="signup-header">
           ZAREJESTRUJ SIĘ
