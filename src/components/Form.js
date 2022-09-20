@@ -89,6 +89,16 @@ export const Form = () => {
         </div>
       </div>
 
+      {/* <div className="form-details">
+        <div className="form-details-padding">
+          <div className="form-details-header">Wazne!</div>
+          <div className="form-details-content">
+            Wszystkie rzeczy do oddania zapakuj w 60l worki. Dokładną
+            instrukcję, jak poprawnie spakować rzeczy, znajdziesz <a>TUTAJ</a>
+          </div>
+        </div>
+      </div> */}
+
       {/* 3 - form steps */}
       <div className="form-steps">
         <div className="form-steps-number">Krok 1/4</div>
@@ -127,6 +137,44 @@ export const Form = () => {
           <button>Dalej</button>
         </div>
       </div>
+
+      {/* <div className="form-steps">
+        <div className="form-steps-number">Krok 2/4</div>
+
+        <div className="form-steps-header">
+          Podaj liczbę 60l worków, w które spakowałeś/aś rzeczy:
+        </div>
+
+      <div className="dropdown-section">
+        <div className="dropdown">
+          <div className="dropdown-menu">
+            <div className="dropdown-menu-title">
+              <p>Liczba 60l worków:</p>
+            </div>
+            <div className="dropdown-menu-btn">
+              <div className="dropdown-menu-text">
+                <p>- wybierz - </p>
+              </div>
+              <div className="dropdown-menu-icon">
+                <img src={require("../assets/Icon-Arrow-Up.png")} />
+              </div>
+            </div>
+          </div>
+          <div className="dropdown-menu-content">
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+          </div>
+        </div>
+      </div>
+
+        <div className="form-steps-buttons">
+          <button className="back-btn">Wstecz</button>
+          <button className="next-btn">Dalej</button>
+        </div>
+      </div> */}
 
       <ContactUs />
     </div>
