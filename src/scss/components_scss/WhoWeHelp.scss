@@ -1,64 +1,69 @@
-@import '../settings/colors';
-@import '../settings/fonts';
+@import "../settings/colors";
+@import "../settings/fonts";
 
 .whowehelp-container {
-    max-width: 100%;
-    background-color: white;
-    // display: flex;
-    // flex-direction: column;
+  max-width: 100%;
+  background-color: white;
+  // display: flex;
+  // flex-direction: column;
 }
 
 .whowehelp-first-section p {
-    font-family: $font-base;
-    font-size: 40px;
-    color: $color-darkgrey;
-    padding-top: 60px;
-    padding-bottom: 23px;
+  font-family: $font-base;
+  font-size: 40px;
+  color: $color-darkgrey;
+  padding-top: 60px;
+  padding-bottom: 23px;
 }
 
 .whowehelp-second-section {
-    padding-top: 50px;
-    padding-bottom: 70px;
-    padding-left: 400px;
-    padding-right: 400px;
-    font-family: $font-base;
-    font-size: 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: $color-darkgrey;
+  padding-top: 50px;
+  padding-bottom: 70px;
+  padding-left: 500px;
+  padding-right: 500px;
+  font-family: $font-base;
+  font-size: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $color-darkgrey;
+  border: 1px solid transparent;
+
+  .active {
+    color: black;
+    border: 1px solid black;
+  }
 }
 
 .whowehelp-second-section div {
-    width: 200px;
+  max-width: 250px;
+  padding: 24px 30px;
+  cursor: pointer;
 }
 
 .whowehelp-third-section {
-    font-size: 22px;
-    padding-top: 0px;
-    padding-bottom: 70px;
-    padding-left: 600px;
-    padding-right: 600px;
+  font-size: 22px;
+  padding-top: 0px;
+  padding-bottom: 70px;
+  padding-left: 600px;
+  padding-right: 600px;
+  p {
+    line-height: 32px;
+  }
 }
 
 .whowehelp-numbering {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-left: 880px;
-    padding-right: 880px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 880px;
+  padding-right: 880px;
 }
 
 .whowehelp-numbering div {
-    color: black;
-    padding: 12px;
-}
-
-.active {
-    color: black;
-    border: 1px solid black;
-    padding: 12px;
+  color: black;
+  padding: 12px;
 }
 
 // <NavLink
@@ -68,38 +73,46 @@
 // </NavLink>
 
 .beneficients-section-content {
-    display: flex;
-    justify-content: space-between;
-    margin-right: 400px;
-    margin-left: 400px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 400px;
+  margin-left: 400px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
 }
 
 // .beneficients-data {
-    // padding-left: 300px;
-    // padding-right: 300px;
+// padding-left: 300px;
+// padding-right: 300px;
 // }
 
 .beneficients-name {
-    font-size: 25px;
-    color: $color-darkgrey;
-    font-family: $font-base;
-    text-align: left;
-    padding-bottom: 8px;
+  font-size: 25px;
+  color: $color-darkgrey;
+  font-family: $font-base;
+  text-align: left;
+  padding-bottom: 8px;
 }
 
 .beneficients-target {
-    font-size: 15px;
-    font-style: italic;
-    color: $color-darkgrey;
-    text-align: left;
+  font-size: 15px;
+  font-style: italic;
+  color: $color-darkgrey;
+  text-align: left;
 }
 
 .beneficients-needs {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .beneficient {
-    padding-bottom: 35px;
+  padding-bottom: 35px;
+}
+
+.beneficients-number {
+  border: 1px solid transparent;
+
+  &.active {
+    border: 1px solid black;
+  }
 }

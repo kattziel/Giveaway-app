@@ -1,9 +1,11 @@
 import React from "react";
 import "../scss/components_scss/Contact.scss";
 import { ReactComponent as Decoration } from "./../assets/Decoration.svg";
+import { Element } from "react-scroll";
 
 export default function Contact() {
   return (
+    <Element name="test4">
     <div className="contact-container">
       <div className="image-section">
         <img src={require("./../assets/Background-Contact-Form.jpg")} />
@@ -51,5 +53,6 @@ export default function Contact() {
         </div>
       </div>
     </div>
+    </Element>
   );
 }

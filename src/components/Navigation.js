@@ -41,7 +41,7 @@ const Navigation = () => {
       <div className="navigation-page-menu">
         <ul>
           <li>
-            <Link to="/" >Start</Link>
+            <Link to="/">Start</Link>
           </li>
           <li>
             <ScrollLink
@@ -55,9 +55,42 @@ const Navigation = () => {
               O co chodzi?
             </ScrollLink>
           </li>
-          <li>O nas</li>
-          <li>Fundacja i organizacje</li>
-          <li>Kontakt</li>
+          <li>
+            <ScrollLink
+              activeClass="active"
+              className="test2"
+              to="test2"
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              O nas
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink
+              activeClass="active"
+              className="test3"
+              to="test3"
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              Fundacja i organizacje
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink
+              activeClass="active"
+              className="test4"
+              to="test4"
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              Kontakt
+            </ScrollLink>
+          </li>
         </ul>
       </div>
     </div>

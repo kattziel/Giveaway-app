@@ -2,10 +2,12 @@ import React from 'react'
 import './../scss/components_scss/AboutUs.scss';
 import { ReactComponent as Decoration } from "./../assets/Decoration.svg";
 import { ReactComponent as Signature } from "../assets/Signature.svg";
+import { Element } from "react-scroll";
 
 
 export default function AboutUs() {
   return (
+    <Element name="test2">
     <div className="about-us-container">
 
       <div className="about-us-content">
@@ -35,5 +37,6 @@ export default function AboutUs() {
       </div>
 
     </div>
+    </Element>
   )
 }
