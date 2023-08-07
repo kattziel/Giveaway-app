@@ -3,6 +3,7 @@ import React from "react";
 import { ReactComponent as Decoration } from "./../assets/Decoration.svg";
 import { SimpleStepColumn } from "./simple_steps/SimpleStepColumn";
 import { Element } from "react-scroll";
+import { Link } from "react-router-dom";
 
 //styles
 import "./../scss/components_scss/SimpleSteps.scss";
@@ -49,10 +50,12 @@ export default function SimpleSteps() {
 
         <div className="simple-steps-third-container">
           <div>
-            <button className="btn">
-              ODDAJ <br />
-              RZECZY
-            </button>
+            <Link to="login">
+              <button className="btn">
+                ODDAJ <br />
+                RZECZY
+              </button>
+            </Link>
           </div>
         </div>
       </div>
