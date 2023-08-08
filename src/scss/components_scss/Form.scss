@@ -104,8 +104,8 @@
 
 .form-steps {
   width: 100%;
-  height: 883px;
   background-image: url("../../assets/Background-Form.jpg");
+  background-size: cover;
 }
 
 .form-steps-number {
@@ -146,6 +146,7 @@
 .form-steps-button {
   display: flex;
   flex-direction: row;
+  padding-bottom: 80px;
 }
 
 .form-steps-button button {
@@ -181,7 +182,7 @@
   align-items: center;
 }
 
-.form-steps-giveaway-picker input[type="radio"] {
+.form-steps-giveaway-picker input[type="checkbox"] {
   display: none;
 }
 

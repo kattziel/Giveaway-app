@@ -2,10 +2,10 @@ import React from "react";
 import { useAuth } from "../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 import { ReactComponent as Decoration } from "./../assets/Decoration.svg";
-import { Link } from "react-router-dom";
 
 import "../scss/components_scss/Form.scss";
 
+import Questionnaire from "./Questionnaire";
 import ContactUs from "./Contact";
 
 export const Form = () => {
@@ -19,7 +19,6 @@ export const Form = () => {
 
   return (
     <div>
-      {/* 1- form header */}
       <div className="form-header">
         <div className="form-header-img-section">
           <img src={require("../assets/Form-Hero-Image.jpg")} />
@@ -77,105 +76,7 @@ export const Form = () => {
           </div>
         </div>
       </div>
-
-      {/* 2- form details */}
-      <div className="form-details">
-        <div className="form-details-padding">
-          <div className="form-details-header">Wazne!</div>
-          <div className="form-details-content">
-            Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy
-            wiedzieć, komu najlepiej je przekazać.
-          </div>
-        </div>
-      </div>
-
-      {/* <div className="form-details">
-        <div className="form-details-padding">
-          <div className="form-details-header">Wazne!</div>
-          <div className="form-details-content">
-            Wszystkie rzeczy do oddania zapakuj w 60l worki. Dokładną
-            instrukcję, jak poprawnie spakować rzeczy, znajdziesz <a>TUTAJ</a>
-          </div>
-        </div>
-      </div> */}
-
-      {/* 3 - form steps */}
-      <div className="form-steps">
-        <div className="form-steps-number">Krok 1/4</div>
-        <div className="form-steps-header">Zaznacz, co chcesz oddać:</div>
-        <div className="form-steps-giveaway-options">
-          <div className="form-steps-giveaway-picker">
-
-            <label class="checkbox">
-              <input type="radio" />
-              <span></span>
-              ubrania, które nadają się do ponownego uzycia
-            </label>
-            <label class="checkbox">
-              <input type="radio" />
-              <span></span>
-            ubrania do wyrzucenia
-            </label>
-            <label class="checkbox">
-              <input type="radio" />
-              <span></span>
-              zabawki
-            </label>
-            <label class="checkbox">
-              <input type="radio" />
-              <span></span>
-              ksiązki
-            </label>
-            <label class="checkbox">
-              <input type="radio" />
-              <span></span>
-              inne
-            </label>
-          </div>
-        </div>
-        <div className="form-steps-button">
-          <button>Dalej</button>
-        </div>
-      </div>
-
-      {/* <div className="form-steps">
-        <div className="form-steps-number">Krok 2/4</div>
-
-        <div className="form-steps-header">
-          Podaj liczbę 60l worków, w które spakowałeś/aś rzeczy:
-        </div>
-
-      <div className="dropdown-section">
-        <div className="dropdown">
-          <div className="dropdown-menu">
-            <div className="dropdown-menu-title">
-              <p>Liczba 60l worków:</p>
-            </div>
-            <div className="dropdown-menu-btn">
-              <div className="dropdown-menu-text">
-                <p>- wybierz - </p>
-              </div>
-              <div className="dropdown-menu-icon">
-                <img src={require("../assets/Icon-Arrow-Up.png")} />
-              </div>
-            </div>
-          </div>
-          <div className="dropdown-menu-content">
-            <a href="#">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-            <a href="#">5</a>
-          </div>
-        </div>
-      </div>
-
-        <div className="form-steps-buttons">
-          <button className="back-btn">Wstecz</button>
-          <button className="next-btn">Dalej</button>
-        </div>
-      </div> */}
-
+      <Questionnaire />
       <ContactUs />
     </div>
   );

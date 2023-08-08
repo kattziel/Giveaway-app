@@ -24,6 +24,7 @@ export default function WhoWeHelp() {
         </div>
 
         <div className="whowehelp-second-section">
+          
           <SectionButton
             onClick={(value) => setActiveSection(value)}
             activeSection={activeSection}
@@ -31,6 +32,7 @@ export default function WhoWeHelp() {
           >
             <p>Fundacjom</p>
           </SectionButton>
+
           <SectionButton
             onClick={(value) => setActiveSection(value)}
             activeSection={activeSection}
@@ -38,6 +40,7 @@ export default function WhoWeHelp() {
           >
             <p>Organizacjom pozarządowym</p>
           </SectionButton>
+
           <SectionButton
             onClick={(value) => setActiveSection(value)}
             activeSection={activeSection}
