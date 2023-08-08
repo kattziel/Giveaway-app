@@ -194,6 +194,10 @@
 
 //DROPDOWN STYLING
 
+.dropdown {
+  position: relative;
+}
+
 .dropdown-section {
   display: flex;
   padding-left: 142px;
@@ -235,12 +239,12 @@
 }
 
 .dropdown-menu-content {
+  position: absolute;
+  right: 0;
+  top: 100%;
   display: flex;
+  top: 72; /* Position below the dropdown menu */
 }
-
-// .dropdown-menu-text {
-//   margin: 0px, 50px, 0px, 50px;
-// }
 
 // STYLOWANIE DROPDOWNU
 

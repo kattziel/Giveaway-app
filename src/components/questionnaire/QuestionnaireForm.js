@@ -1,6 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 
 const QuestionnaireForm = ({ activeSection }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedValue, setSelectedValue] = useState(null);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const selectValue = (number) => {
+    setSelectedValue(number);
+    setIsOpen(false);
+  };
+
   switch (activeSection) {
     case "giveaway-things":
       return (
@@ -52,19 +64,28 @@ const QuestionnaireForm = ({ activeSection }) => {
                 </div>
                 <div className="dropdown-menu-btn">
                   <div className="dropdown-menu-text">
-                    <p>- wybierz - </p>
+                    <p>
+                      {selectedValue !== null ? selectedValue : "- wybierz -"}
+                    </p>
                   </div>
                   <div className="dropdown-menu-icon">
-                    <img src={require("../../assets/Icon-Arrow-Up.png")} />
+                    <img
+                      src={require("../../assets/Icon-Arrow-Up.png")}
+                      style={{
+                        width: "40px",
+                        height: "40px",
+                      }}
+                      alt="Arrow up"
+                    />
                   </div>
                 </div>
               </div>
               <div className="dropdown-menu-content">
-                <a href="#">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">5</a>
+                <button onClick={() => selectValue("1")}>1</button>
+                <button onClick={() => selectValue("2")}>2</button>
+                <button onClick={() => selectValue("3")}>3</button>
+                <button onClick={() => selectValue("4")}>4</button>
+                <button onClick={() => selectValue("5")}>5</button>
               </div>
             </div>
           </div>
@@ -91,7 +112,9 @@ const QuestionnaireForm = ({ activeSection }) => {
                 </div>
                 <div className="dropdown-menu-btn">
                   <div className="dropdown-menu-text">
-                    <p>- wybierz - </p>
+                    <p>
+                      {selectedValue !== null ? selectedValue : "- wybierz -"}
+                    </p>
                   </div>
                   <div className="dropdown-menu-icon">
                     <img
@@ -106,11 +129,11 @@ const QuestionnaireForm = ({ activeSection }) => {
                 </div>
               </div>
               <div className="dropdown-menu-content">
-                <button onClick={(e) => e.preventDefault()}>1</button>
-                <button onClick={(e) => e.preventDefault()}>2</button>
-                <button onClick={(e) => e.preventDefault()}>3</button>
-                <button onClick={(e) => e.preventDefault()}>4</button>
-                <button onClick={(e) => e.preventDefault()}>5</button>
+                <button onClick={() => selectValue("1")}>1</button>
+                <button onClick={() => selectValue("2")}>2</button>
+                <button onClick={() => selectValue("3")}>3</button>
+                <button onClick={() => selectValue("4")}>4</button>
+                <button onClick={() => selectValue("5")}>5</button>
               </div>
             </div>
           </div>
