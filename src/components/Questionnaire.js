@@ -5,7 +5,7 @@ import QuestionnaireForm from "./questionnaire/QuestionnaireForm";
 import QuestionnaireControl from "./questionnaire/QuestionnaireControl";
 
 const Questionnaire = () => {
-  const [activeQuestion, setActiveQuestion] = useState(1);
+  const [activeStep, setActiveStep] = useState(1);
 
   return (
     <>
