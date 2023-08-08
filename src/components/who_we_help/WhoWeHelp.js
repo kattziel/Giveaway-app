@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import "../scss/components_scss/WhoWeHelp.scss";
-import { BeneficientsNumbering } from "./beneficients/BeneficientsNumbering";
-import { ReactComponent as Decoration } from "./../assets/Decoration.svg";
 import { Element } from "react-scroll";
-import { SectionButton } from "./who_we_help/SectionButton";
-import { SectionDescription } from "./who_we_help/SectionDescription";
-import { SectionList } from "./who_we_help/SectionList";
+import { ReactComponent as Decoration } from "./../../assets/Decoration.svg";
+import "../../scss/components_scss/WhoWeHelp.scss";
+
+import { BeneficientsNumbering } from "../beneficients/BeneficientsNumbering";
+import { SectionButton } from "./SectionButton";
+import { SectionDescription } from "./SectionDescription";
+import { SectionList } from "./SectionList";
 
 export default function WhoWeHelp() {
   const [activeSection, setActiveSection] = useState("foundation");
@@ -17,14 +18,19 @@ export default function WhoWeHelp() {
 
   return (
     <Element name="test3">
+      {/* relevant to scroll down from header section on the top of the page */}
+
       <div className="whowehelp-container">
         <div className="whowehelp-first-section">
           <p>Komu pomagamy?</p>
           <Decoration />
         </div>
 
+
+
+
         <div className="whowehelp-second-section">
-          
+
           <SectionButton
             onClick={(value) => setActiveSection(value)}
             activeSection={activeSection}
@@ -50,9 +56,17 @@ export default function WhoWeHelp() {
           </SectionButton>
         </div>
 
+
+
+
+
         <div className="whowehelp-third-section">
           <SectionDescription activeSection={activeSection} />
         </div>
+
+
+
+        
 
         <div className="whowehelp-fourth-section">
           <SectionList

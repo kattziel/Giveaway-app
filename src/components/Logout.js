@@ -15,18 +15,18 @@ export const Logout = () => {
     <div className="signup-container">
       <div className="signup-logging-section">
         <div className="signup-header">
-          ZOSTAŁEŚ POPRAWNIE WYLOGOWANY
+          Wylogowanie nastąpiło pomyślnie
           <div>
             <Decoration />
           </div>
         </div>
 
         <div className="signup-buttons">
-          <btn className="signup-btn">
+          {/* <btn className="signup-btn">
             <Link to="../login">Zaloguj się</Link>
-          </btn>
-          <btn className="signup-btn">
-            <Link to="../signup">Zarejestruj się</Link>
+          </btn> */}
+          <btn className="loggedout-btn">
+            <Link to="/">Strona główna</Link>
           </btn>
         </div>
       </div>
