@@ -21,7 +21,7 @@ export const Form = () => {
     <div>
       <div className="form-header">
         <div className="form-header-img-section">
-          <img src={require("../assets/Form-Hero-Image.jpg")} />
+          <img src={require("../assets/Form-Hero-Image.jpg")} alt="sweaterimage"/>
         </div>
 
         <div className="form-header-content-section">

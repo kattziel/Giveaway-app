@@ -27,6 +27,33 @@ const Important = ({ activeSection }) => {
           </div>
         </div>
       );
+
+    case "localization":
+      return (
+        <div className="form-details">
+          <div className="form-details-padding">
+            <div className="form-details-header">Ważne!</div>
+            <div className="form-details-content">
+              Jeśli wiesz komu chcesz pomóc, możesz wpisać nazwę tej organizacji
+              w wyszukiwarce. Możesz też filtrować organizacje po ich
+              lokalizacji bądź celu ich pomocy.
+            </div>
+          </div>
+        </div>
+      );
+
+    case "pickup":
+      return (
+        <div className="form-details">
+          <div className="form-details-padding">
+            <div className="form-details-header">Ważne!</div>
+            <div className="form-details-content">
+              Podaj adres oraz termin odbioru rzeczy.
+            </div>
+          </div>
+        </div>
+      );
+
     default:
       return (
         <div className="form-details">

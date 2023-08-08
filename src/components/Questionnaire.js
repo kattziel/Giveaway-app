@@ -10,9 +10,10 @@ const Questionnaire = () => {
   return (
     <>
       <Important />
-      <div className="form-steps">
+      <div className="form-steps form-steps-flex">
         <Steps />
         <QuestionnaireForm />
+        <QuestionnaireControl/>
       </div>
     </>
   );

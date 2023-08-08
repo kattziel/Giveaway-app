@@ -103,12 +103,18 @@
 }
 
 .form-steps {
+  display: flex;
+  flex-direction: column;
+  height: 900px;
   width: 100%;
   background-image: url("../../assets/Background-Form.jpg");
   background-size: cover;
+  // border: 1px solid blue;
+
 }
 
 .form-steps-number {
+  // border: 1px solid teal;
   text-align: left;
   font: normal normal 300 24px/27px Open Sans;
   letter-spacing: 0px;
@@ -117,6 +123,7 @@
   padding-left: 142px;
   padding-top: 36px;
   padding-bottom: 64px;
+  flex: 1;
 }
 
 .form-steps-header {
@@ -146,23 +153,22 @@
 .form-steps-button {
   display: flex;
   flex-direction: row;
-  padding-bottom: 80px;
 }
 
-.form-steps-button button {
-  display: flex;
-  margin-left: 142px;
-  padding: 23px;
-  padding-left: 63px;
-  padding-right: 63px;
-  text-align: left;
-  font: normal normal 300 24px/32px Open Sans;
-  letter-spacing: 0px;
-  color: #000000;
-  opacity: 0.7;
-  background-color: none;
-  justify-content: left;
-}
+// .form-steps-button button {
+//   display: flex;
+//   margin-left: 142px;
+//   padding: 23px;
+//   padding-left: 63px;
+//   padding-right: 63px;
+//   text-align: left;
+//   font: normal normal 300 24px/32px Open Sans;
+//   letter-spacing: 0px;
+//   color: #000000;
+//   opacity: 0.7;
+//   background-color: none;
+//   justify-content: left;
+// }
 
 .form-steps-giveaway-picker {
   display: flex;
@@ -364,10 +370,11 @@
 // STYLOWANIE PRZYCISKÓW
 
 .form-steps-buttons {
-  display: flex;
+  flex: 1;
   flex-direction: row;
-  margin-left: 142px;
-  padding-top: 450px;
+  // border: 1px solid red;
+  padding: 40px;
+  padding-left: 128px;
 }
 
 .form-steps-buttons button {
@@ -382,6 +389,7 @@
   opacity: 0.7;
   background-color: none;
   justify-content: left;
+  margin-right: 60px;
 }
 
 .back-btn {
@@ -390,5 +398,9 @@
 
 .next-btn {
   padding: 23px, 63px, 23px, 63px;
-  margin-left: 50px;
+  // margin-left: 50px;
+}
+
+.questionnaire-content {
+  flex: 10
 }
