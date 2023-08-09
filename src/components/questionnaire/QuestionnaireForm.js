@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import QuestionnaireControl from "./QuestionnaireControl";
 
 const QuestionnaireForm = ({ activeSection, onSectionChange }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,6 +12,10 @@ const QuestionnaireForm = ({ activeSection, onSectionChange }) => {
   const selectValue = (number) => {
     setSelectedValue(number);
     setIsOpen(false);
+  };
+
+  const sectionChangeHandler = (activeSection) => {
+    onSectionChange(activeSection);
   };
 
   switch (activeSection) {
@@ -49,14 +54,10 @@ const QuestionnaireForm = ({ activeSection, onSectionChange }) => {
               </div>
             </div>
           </div>
-          <div className="form-steps-buttons">
-            <button
-              className="next-btn"
-              onClick={() => onSectionChange("packing-instructions")}
-            >
-              Dalej
-            </button>
-          </div>
+          <QuestionnaireControl
+            activeSection="giveaway-things"
+            sectionChange={sectionChangeHandler}
+          />
         </>
       );
 
@@ -101,95 +102,30 @@ const QuestionnaireForm = ({ activeSection, onSectionChange }) => {
               </div>
             </div>
           </div>
-          <div className="form-steps-buttons">
-            <button
-              className="next-btn"
-              onClick={() => onSectionChange("giveaway-things")}
-            >
-              Powrót
-            </button>
-            <button
-              className="next-btn"
-              onClick={() => onSectionChange("localization")}
-            >
-              Dalej
-            </button>
-          </div>
+          <QuestionnaireControl
+            activeSection="packing-instructions"
+            sectionChange={sectionChangeHandler}
+          />
         </>
       );
 
     case "localization":
       return (
-        <div className="form-steps-buttons">
-          <button
-            className="next-btn"
-            onClick={() => onSectionChange("packing-instructions")}
-          >
-            Powrót
-          </button>
-          <button
-            className="next-btn"
-            onClick={() => onSectionChange("pickup")}
-          >
-            Dalej
-          </button>
-        </div>
+        <QuestionnaireControl
+          activeSection="localization"
+          sectionChange={sectionChangeHandler}
+        />
       );
 
     case "pickup":
       return (
-        <div className="form-steps-buttons">
-          <button
-            className="next-btn"
-            onClick={() => onSectionChange("localization")}
-          >
-            Powrót
-          </button>
-        </div>
+        <QuestionnaireControl
+          activeSection="pickup"
+          sectionChange={sectionChangeHandler}
+        />
       );
 
     default:
-      // return (
-      //   <div className="questionnaire-content">
-      //     <div className="form-steps-header">
-      //       Podaj liczbę 60l worków, w które spakowałeś/aś rzeczy:
-      //     </div>
-      //     <div className="dropdown-section">
-      //       <div className="dropdown">
-      //         <div className="dropdown-menu">
-      //           <div className="dropdown-menu-title">
-      //             <p>Liczba 60l worków:</p>
-      //           </div>
-      //           <div className="dropdown-menu-btn">
-      //             <div className="dropdown-menu-text">
-      //               <p>
-      //                 {selectedValue !== null ? selectedValue : "- wybierz -"}
-      //               </p>
-      //             </div>
-      //             <div className="dropdown-menu-icon">
-      //               <img
-      //                 src={require("../../assets/Icon-Arrow-Up.png")}
-      //                 style={{
-      //                   width: "40px",
-      //                   height: "40px",
-      //                 }}
-      //                 alt="Arrow up"
-      //               />
-      //             </div>
-      //           </div>
-      //         </div>
-      //         <div className="dropdown-menu-content">
-      //           <button onClick={() => selectValue("1")}>1</button>
-      //           <button onClick={() => selectValue("2")}>2</button>
-      //           <button onClick={() => selectValue("3")}>3</button>
-      //           <button onClick={() => selectValue("4")}>4</button>
-      //           <button onClick={() => selectValue("5")}>5</button>
-      //         </div>
-      //       </div>
-      //     </div>
-      //   </div>
-      // );
-
       return (
         <>
           <div className="questionnaire-content">
