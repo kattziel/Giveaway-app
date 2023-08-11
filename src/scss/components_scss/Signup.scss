@@ -117,18 +117,19 @@
 }
 
 .signup-buttons {
+    background-color: white;
     display: flex;
     justify-content: space-between;
-    padding: 0px 15px 0px 15px;
+    padding: 30px 15px 0px 15px;
 }
 
-.signup-buttons btn a {
+.signup-buttons button a {
     text-decoration:none;
     border: none;
     color: $color-grey;
 }
 
-.signup-btn {
+.auth-btn {
     // border: 1px solid $color-grey;
     padding: 25px;
     text-decoration: none;

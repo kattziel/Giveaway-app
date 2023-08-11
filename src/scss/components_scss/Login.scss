@@ -117,19 +117,21 @@
 }
 
 .login-buttons {
+  background-color: white;
   display: flex;
-  justify-content: space-between;
-  padding: 0px 15px 0px 15px;
+  justify-content: space-around;
+  padding: 30px 15px 0px 15px;
 }
 
-.login-buttons btn a {
+.login-buttons button a {
   text-decoration: none;
   border: none;
   color: $color-grey;
 }
 
-.login-btn {
-  // border: 1px solid $color-grey;
+.auth-btn {
+  border: none;
+  background-color: white;
   padding: 25px;
   text-decoration: none;
   display: flex;

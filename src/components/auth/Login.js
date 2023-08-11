@@ -1,14 +1,28 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ReactComponent as Decoration } from "./../../assets/Decoration.svg";
-import { useAuth } from "../../hooks/useAuth";
 import "../../scss/components_scss/Login.scss";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+// import { useAuth } from "../../hooks/useAuth";
 
 export default function Login() {
-  const [user, setUser] = useState("");
-  // const auth = useAuth();
-  const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
+  // const auth = useAuth();
+  // const navigate = useNavigate();
+
+  const loginHandler = (e) => {
+    e.preventDefault();
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        console.log(userCredential);
+      })
+      .catch((error) => {
+        console.log("You have got an error: ", error);
+      });
+  };
   // const handleLogin = () => {
   //   auth.login(user);
   //   navigate("/");
@@ -24,30 +38,34 @@ export default function Login() {
           </div>
         </div>
 
-        <div className="login-textarea">
+        <form onSubmit={loginHandler} className="login-textarea">
           <div className="login-textarea-content">
             Email
             <input
-              id=""
-              type="text"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="login-form-text"
-              onChange={(e) => setUser(e.target.value)}
             ></input>
           </div>
           <div className="login-textarea-content">
             Hasło
-            <input id="" type="password" className="login-form-text"></input>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="login-form-text"
+            ></input>
           </div>
-        </div>
-
-        <div className="login-buttons">
-          <btn className="login-btn">
-            <Link to="../signup">Zarejestruj się</Link>
-          </btn>
-          <btn className="login-btn">
-            Zaloguj się
-          </btn>
-        </div>
+          <div className="login-buttons">
+            <button type="submit" className="auth-btn">
+              Zaloguj się
+            </button>
+            <button className="auth-btn">
+              <Link to="../signup">Zarejestruj się</Link>
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );
