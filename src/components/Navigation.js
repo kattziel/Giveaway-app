@@ -10,6 +10,7 @@ import "../scss/components_scss/Navigation.scss";
 //function
 const Navigation = () => {
   const auth = useAuth();
+  // const location = useLocation();
 
   return (
     <div className="navigation-container">
