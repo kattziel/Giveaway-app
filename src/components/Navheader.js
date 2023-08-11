@@ -37,10 +37,15 @@ export default function Navheader() {
                 <button className="nav-btn">ODDAJ RZECZY</button>
               </Link>
             )}
-
-            <Link to="login">
-              <button className="nav-btn">ZORGANIZUJ ZBIÓRKĘ</button>
-            </Link>
+            {auth.user ? (
+              <Link to="form">
+                <button className="nav-btn">ZORGANIZUJ ZBIÓRKĘ</button>
+              </Link>
+            ) : (
+              <Link to="login">
+                <button className="nav-btn">ZORGANIZUJ ZBIÓRKĘ</button>
+              </Link>
+            )}
           </div>
         </div>
       </div>

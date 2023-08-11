@@ -1,6 +1,6 @@
 //general
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import { useAuth } from "../hooks/useAuth";
 
@@ -10,7 +10,10 @@ import "../scss/components_scss/Navigation.scss";
 //function
 const Navigation = () => {
   const auth = useAuth();
-  // const location = useLocation();
+  const location = useLocation();
+  const isDisabled = (path) => {
+    return location.pathname === "login" || location.pathname === "signup";
+  };
 
   return (
     <div className="navigation-container">
@@ -41,11 +44,15 @@ const Navigation = () => {
 
       <div className="navigation-page-menu">
         <ul>
+
           <li>
             <Link to="/">Start</Link>
           </li>
+
+
+
           <li>
-            <ScrollLink
+           <ScrollLink
               activeClass="active"
               className="test1"
               to="test1"
@@ -56,6 +63,9 @@ const Navigation = () => {
               O co chodzi?
             </ScrollLink>
           </li>
+
+
+
           <li>
             <ScrollLink
               activeClass="active"
@@ -68,6 +78,9 @@ const Navigation = () => {
               O nas
             </ScrollLink>
           </li>
+
+
+
           <li>
             <ScrollLink
               activeClass="active"
@@ -80,6 +93,9 @@ const Navigation = () => {
               Fundacja i organizacje
             </ScrollLink>
           </li>
+
+
+
           <li>
             <ScrollLink
               activeClass="active"
@@ -92,6 +108,9 @@ const Navigation = () => {
               Kontakt
             </ScrollLink>
           </li>
+
+
+
         </ul>
       </div>
     </div>
