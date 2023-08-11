@@ -12,13 +12,13 @@ import "./App.css";
 
 // pages & components
 import Home from "./components/Home";
-import Login from "./components/Login";
-import Signup from "./components/Signup";
+import Login from "./components/auth/Login";
+import Signup from "./components/auth/Signup";
 import Navigation from "./components/Navigation";
 
 import { AuthProvider } from "./hooks/useAuth";
 import { Form } from "./components/Form";
-import { Logout } from "./components/Logout";
+import { Logout } from "./components/auth/Logout";
 
 // import { RequireAuth } from "./components/RequireAuth";
 

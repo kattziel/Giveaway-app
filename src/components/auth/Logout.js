@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import { useAuth } from "../hooks/useAuth";
-import "../scss/components_scss/Logout.scss";
+import { useAuth } from "../../hooks/useAuth";
+import "../../scss/components_scss/Logout.scss";
 import { Link } from "react-router-dom";
-import { ReactComponent as Decoration } from "./../assets/Decoration.svg";
+import { ReactComponent as Decoration } from "./../../assets/Decoration.svg";
 
 export const Logout = () => {
   const auth = useAuth();

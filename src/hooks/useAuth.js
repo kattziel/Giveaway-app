@@ -1,4 +1,4 @@
-import { useState, createContext, useContext } from "react";
+import React, { useState, createContext, useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useLocalStorage } from "./useLocalStorage";
 
@@ -6,17 +6,16 @@ const AuthContext = createContext(null);
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState("");
-  // const [user, setUser] = useLocalStorage("user", null);
 
   const login = (user) => {
     setUser(user);
   };
 
-  const logout = (user) => {
+  const logout = () => {
     setUser(null);
   };
 
-  const signup = ({user}) => {
+  const signup = ({ user }) => {
     setUser(user);
   };
 

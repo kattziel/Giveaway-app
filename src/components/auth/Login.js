@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ReactComponent as Decoration } from "./../assets/Decoration.svg";
-import { useAuth } from "../hooks/useAuth";
-import "../scss/components_scss/Login.scss";
+import { ReactComponent as Decoration } from "./../../assets/Decoration.svg";
+import { useAuth } from "../../hooks/useAuth";
+import "../../scss/components_scss/Login.scss";
 
 export default function Login() {
   const [user, setUser] = useState("");
-  const auth = useAuth();
+  // const auth = useAuth();
   const navigate = useNavigate();
 
-  const handleLogin = () => {
-    auth.login(user);
-    navigate("/");
-  };
+  // const handleLogin = () => {
+  //   auth.login(user);
+  //   navigate("/");
+  // };
 
   return (
     <div className="login-container">
@@ -44,7 +44,7 @@ export default function Login() {
           <btn className="login-btn">
             <Link to="../signup">Zarejestruj się</Link>
           </btn>
-          <btn className="login-btn" onClick={handleLogin}>
+          <btn className="login-btn">
             Zaloguj się
           </btn>
         </div>
