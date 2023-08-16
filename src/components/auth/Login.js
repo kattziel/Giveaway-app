@@ -1,21 +1,20 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { ReactComponent as Decoration } from "./../../assets/Decoration.svg";
 import "../../scss/components_scss/Login.scss";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
 // import { useAuth } from "../../hooks/useAuth";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
   // const auth = useAuth();
   // const navigate = useNavigate();
 
   const loginHandler = (e) => {
     e.preventDefault();
-    createUserWithEmailAndPassword(auth, email, password)
+    signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log(userCredential);
       })
@@ -32,7 +31,7 @@ export default function Login() {
     <div className="login-container">
       <div className="login-logging-section">
         <div className="login-header">
-          ZALOGUJ SIĘ
+          LOG IN
           <div>
             <Decoration />
           </div>
@@ -49,7 +48,7 @@ export default function Login() {
             ></input>
           </div>
           <div className="login-textarea-content">
-            Hasło
+            Password
             <input
               type="password"
               value={password}
@@ -59,10 +58,10 @@ export default function Login() {
           </div>
           <div className="login-buttons">
             <button type="submit" className="auth-btn">
-              Zaloguj się
+              Log in
             </button>
             <button className="auth-btn">
-              <Link to="../signup">Zarejestruj się</Link>
+              <Link to="../signup">Sign up</Link>
             </button>
           </div>
         </form>

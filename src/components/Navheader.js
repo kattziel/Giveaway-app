@@ -21,8 +21,8 @@ export default function Navheader() {
       <div className="content-section">
         <div className="main-section">
           <div className="header">
-            <p>Zacznij pomagać!</p>
-            <p>Oddaj niechciane rzeczy w zaufane ręce!</p>
+            <p>Start helping out now!</p>
+            <p>Give unwanted items to trusted hands!</p>
           </div>
           <div className="decoration">
             <Decoration />
@@ -30,20 +30,20 @@ export default function Navheader() {
           <div className="nav-buttons">
             {auth.user ? (
               <Link to="form">
-                <button className="nav-btn">ODDAJ RZECZY</button>
+                <button className="nav-btn">GIVE AWAY ITEMS</button>
               </Link>
             ) : (
               <Link to="login">
-                <button className="nav-btn">ODDAJ RZECZY</button>
+                <button className="nav-btn">GIVE AWAY ITEMS</button>
               </Link>
             )}
             {auth.user ? (
               <Link to="form">
-                <button className="nav-btn">ZORGANIZUJ ZBIÓRKĘ</button>
+                <button className="nav-btn">ORGANIZE A COLLECTION</button>
               </Link>
             ) : (
               <Link to="login">
-                <button className="nav-btn">ZORGANIZUJ ZBIÓRKĘ</button>
+                <button className="nav-btn">ORGANIZE A COLLECTION</button>
               </Link>
             )}
           </div>

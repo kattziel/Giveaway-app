@@ -21,10 +21,10 @@ const Navigation = () => {
         <div className="navigation-user-menu">
           <ul>
             <li>
-              <Link to="login">Zaloguj się</Link>
+              <Link to="login">Log in</Link>
             </li>
             <li>
-              <Link to="signup">Zarejestruj się</Link>
+              <Link to="signup">Sign up</Link>
             </li>
           </ul>
         </div>
@@ -60,7 +60,7 @@ const Navigation = () => {
               smooth={true}
               duration={500}
             >
-              O co chodzi?
+              What is this about?
             </ScrollLink>
           </li>
 
@@ -75,7 +75,7 @@ const Navigation = () => {
               smooth={true}
               duration={500}
             >
-              O nas
+              About us
             </ScrollLink>
           </li>
 
@@ -90,7 +90,7 @@ const Navigation = () => {
               smooth={true}
               duration={500}
             >
-              Fundacja i organizacje
+              Fundations and organizations
             </ScrollLink>
           </li>
 
@@ -105,7 +105,7 @@ const Navigation = () => {
               smooth={true}
               duration={500}
             >
-              Kontakt
+              Contact
             </ScrollLink>
           </li>
 

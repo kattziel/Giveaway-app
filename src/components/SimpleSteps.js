@@ -15,7 +15,7 @@ export default function SimpleSteps() {
         <div className="simple-steps-first-container">
           <div>
             <div className="simple-steps-first-container-text">
-              Wystarczą 4 proste kroki
+              Watch these 4 simple steps
             </div>
             <div className="simple-steps-first-container-decoration">
               <Decoration />
@@ -26,23 +26,23 @@ export default function SimpleSteps() {
         <div className="simple-steps-second-container">
           <div className="simple-steps-second-container-margins">
             <SimpleStepColumn
-              description="ubrania, zabawki, sprzet i inne"
-              title="Wybierz rzeczy"
+              description="clothes, toys, equipment and more"
+              title="Pick items"
               imageName="Icon-1.png"
             />
             <SimpleStepColumn
-              description="skorzystaj z worków na śmieci"
-              title="Spakuj je"
+              description="use garbage bags"
+              title="Pack them"
               imageName="Icon-2.png"
             />
             <SimpleStepColumn
-              description="wybierz zaufane miejsce"
-              title="Zdecyduj, komu chcesz pomóc"
+              description="choose a trusted place"
+              title="Decide who you want to help"
               imageName="Icon-3.png"
             />
             <SimpleStepColumn
-              description="kurier przyjdzie w dogodnym terminie"
-              title="Zamów kuriera"
+              description="delivery man will come at a convenient time"
+              title="Order a delivery man"
               imageName="Icon-4.png"
             />
           </div>
@@ -52,8 +52,8 @@ export default function SimpleSteps() {
           <div>
             <Link to="login">
               <button className="btn">
-                ODDAJ <br />
-                RZECZY
+                GIVE AWAY <br />
+                ITEMS
               </button>
             </Link>
           </div>

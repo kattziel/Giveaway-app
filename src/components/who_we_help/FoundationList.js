@@ -15,19 +15,21 @@ export const FoundationList = ({ activePagination }) => {
 const Page1 = () => (
   <div>
     <BeneficientsElement
-      beneficientsName="Fundacja Dbam o zdrowie - 1"
-      beneficientsTarget="Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji zyciowej"
-      beneficientsNeeds="ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+      beneficientsName="Foundation Care for health - 1"
+      beneficientsTarget="Goal and mission: Helping people in a difficult life situation"
+      beneficientsNeeds="clothes, food, household appliances, furniture, toys"
     />
     <BeneficientsElement
-      beneficientsName="Fundacja Dla dzieci - 1"
-      beneficientsTarget="Cel i misja: Pomoc dzieciom z ubogich rodzin"
-      beneficientsNeeds="ubrania, meble, zabawki"
+      beneficientsName="Foundation For Children - 1"
+      beneficientsTarget="
+      Goal and mission: Helping children from poor families"
+      beneficientsNeeds="clothes, furniture, toys"
     />
     <BeneficientsElement
-      beneficientsName="Fundacja Bez domu - 1"
-      beneficientsTarget="Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania"
-      beneficientsNeeds="ubrania, jedzenie, ciepłe koce"
+      beneficientsName="Foundation Homeless - 1"
+      beneficientsTarget="
+      Goal and mission: Help for people without a place of residence"
+      beneficientsNeeds="clothes, food, warm blankets"
     />
   </div>
 );
@@ -35,38 +37,42 @@ const Page1 = () => (
 const Page2 = () => (
   <div>
     <BeneficientsElement
-      beneficientsName="Fundacja Dbam o zdrowie - 2"
-      beneficientsTarget="Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji zyciowej"
-      beneficientsNeeds="ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+      beneficientsName="Foundation Care for health - 2"
+      beneficientsTarget="Goal and mission: Helping people in a difficult life situation"
+      beneficientsNeeds="clothes, food, household appliances, furniture, toys"
     />
     <BeneficientsElement
-      beneficientsName="Fundacja Dla dzieci - 2"
-      beneficientsTarget="Cel i misja: Pomoc dzieciom z ubogich rodzin"
-      beneficientsNeeds="ubrania, meble, zabawki"
+      beneficientsName="Foundation For Children - 2"
+      beneficientsTarget="
+      Goal and mission: Helping children from poor families"
+      beneficientsNeeds="clothes, furniture, toys"
     />
     <BeneficientsElement
-      beneficientsName="Fundacja Bez domu - 2"
-      beneficientsTarget="Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania"
-      beneficientsNeeds="ubrania, jedzenie, ciepłe koce"
+      beneficientsName="Foundation Homeless - 2"
+      beneficientsTarget="
+      Goal and mission: Help for people without a place of residence"
+      beneficientsNeeds="clothes, food, warm blankets"
     />
   </div>
 );
 const Page3 = () => (
   <div>
     <BeneficientsElement
-      beneficientsName="Fundacja Dbam o zdrowie - 3"
-      beneficientsTarget="Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji zyciowej"
-      beneficientsNeeds="ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+      beneficientsName="Foundation Care for health - 3"
+      beneficientsTarget="Goal and mission: Helping people in a difficult life situation"
+      beneficientsNeeds="clothes, food, household appliances, furniture, toys"
     />
     <BeneficientsElement
-      beneficientsName="Fundacja Dla dzieci - 3"
-      beneficientsTarget="Cel i misja: Pomoc dzieciom z ubogich rodzin"
-      beneficientsNeeds="ubrania, meble, zabawki"
+      beneficientsName="Foundation For Children - 3"
+      beneficientsTarget="
+      Goal and mission: Helping children from poor families"
+      beneficientsNeeds="clothes, furniture, toys"
     />
     <BeneficientsElement
-      beneficientsName="Fundacja Bez domu - 3"
-      beneficientsTarget="Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania"
-      beneficientsNeeds="ubrania, jedzenie, ciepłe koce"
+      beneficientsName="Foundation Homeless - 3"
+      beneficientsTarget="
+      Goal and mission: Help for people without a place of residence"
+      beneficientsNeeds="clothes, food, warm blankets"
     />
   </div>
 );

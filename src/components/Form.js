@@ -21,13 +21,16 @@ export const Form = () => {
     <div>
       <div className="form-header">
         <div className="form-header-img-section">
-          <img src={require("../assets/Form-Hero-Image.jpg")} alt="sweaterimage"/>
+          <img
+            src={require("../assets/Form-Hero-Image.jpg")}
+            alt="sweaterimage"
+          />
         </div>
 
         <div className="form-header-content-section">
           <div className="form-header-header-section">
             <div className="header-div">
-              <p>Oddaj rzeczy, których juz nie chcesz</p>
+              <p>Give away the items you no longer need</p>
               <p>POTRZEBUJĄCYM</p>
             </div>
             <div className="decoration-div">
@@ -37,14 +40,14 @@ export const Form = () => {
           <div className="form-header-steps-section">
             <div>
               <div className="form-header-steps-section-header">
-                Wystarczą 4 proste kroki:
+                Watch these 4 simple steps:
               </div>
               <div className="rhombus-section">
                 <div className="rhombus-parent">
                   <div className="rhombus-child"></div>
                   <p className="rhombus-child-number">1</p>
                   <div className="rhombus-child-text">
-                    <p>Wybierz rzeczy</p>
+                    <p>Pick items</p>
                   </div>
                 </div>
 
@@ -52,7 +55,7 @@ export const Form = () => {
                   <div className="rhombus-child"></div>
                   <p className="rhombus-child-number">2</p>
                   <div className="rhombus-child-text">
-                    <p>Spakuj je w worki</p>
+                    <p>Pack them into bags</p>
                   </div>
                 </div>
 
@@ -60,7 +63,7 @@ export const Form = () => {
                   <div className="rhombus-child"></div>
                   <p className="rhombus-child-number">3</p>
                   <div className="rhombus-child-text">
-                    <p>Wybierz fundację</p>
+                    <p>Choose a fundation</p>
                   </div>
                 </div>
 
@@ -68,7 +71,7 @@ export const Form = () => {
                   <div className="rhombus-child"></div>
                   <p className="rhombus-child-number">4</p>
                   <div className="rhombus-child-text">
-                    <p>Zamów kuriera</p>
+                    <p>Order a delivery man</p>
                   </div>
                 </div>
               </div>

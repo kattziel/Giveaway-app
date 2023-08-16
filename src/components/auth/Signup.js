@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { ReactComponent as Decoration } from "./../../assets/Decoration.svg";
 import { auth } from "../../firebase";
 import "../../scss/components_scss/Signup.scss";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 // import { useAuth } from "../../hooks/useAuth";
 
 export default function Signup() {
@@ -13,7 +13,7 @@ export default function Signup() {
 
   const signupHandler = (e) => {
     e.preventDefault();
-    signInWithEmailAndPassword(auth, email, password)
+    createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log(userCredential);
       })
@@ -39,7 +39,7 @@ export default function Signup() {
     <div className="signup-container">
       <div className="signup-logging-section">
         <div className="signup-header">
-          ZAREJESTRUJ SIĘ
+          SIGN UP
           <div>
             <Decoration />
           </div>
@@ -57,7 +57,7 @@ export default function Signup() {
           </div>
 
           <div className="signup-textarea-content">
-            Hasło
+            Password
             <input
               type="password"
               className="signup-form-text"
@@ -81,10 +81,10 @@ export default function Signup() {
               className="auth-btn"
               type="submit"
             >
-              Zarejestruj się
+              Sign up
             </button>
             <button className="auth-btn">
-              <Link to="../form">Zaloguj się</Link>
+              <Link to="../form">Log in</Link>
             </button>
           </div>
         </form>

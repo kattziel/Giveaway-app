@@ -22,7 +22,7 @@ export default function WhoWeHelp() {
 
       <div className="whowehelp-container">
         <div className="whowehelp-first-section">
-          <p>Komu pomagamy?</p>
+          <p>Who do we help?</p>
           <Decoration />
         </div>
 
@@ -36,7 +36,7 @@ export default function WhoWeHelp() {
             activeSection={activeSection}
             sectionName="foundation"
           >
-            <p>Fundacjom</p>
+            <p>Foundations</p>
           </SectionButton>
 
           <SectionButton
@@ -44,7 +44,7 @@ export default function WhoWeHelp() {
             activeSection={activeSection}
             sectionName="organization"
           >
-            <p>Organizacjom pozarządowym</p>
+            <p>Non-governmental organisations</p>
           </SectionButton>
 
           <SectionButton
@@ -52,7 +52,7 @@ export default function WhoWeHelp() {
             activeSection={activeSection}
             sectionName="fundRaise"
           >
-            <p>Lokalnym zbiórkom</p>
+            <p>Local raises</p>
           </SectionButton>
         </div>
 
@@ -66,7 +66,7 @@ export default function WhoWeHelp() {
 
 
 
-        
+
 
         <div className="whowehelp-fourth-section">
           <SectionList

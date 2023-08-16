@@ -5,9 +5,9 @@ export const SectionDescription = ({ activeSection }) => {
     case "foundation":
       return (
         <p>
-          W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi
-          współpracujemy. Mozesz sprawdzić, czym się zajmują, komu pomagają i
-          czego potrzebują.
+          In our database you will find a list of verified foundations with
+          which we cooperate. You can check what they do, who they help and what
+          they need.
         </p>
       );
 

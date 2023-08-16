@@ -12,7 +12,7 @@ export default function AboutUs() {
 
       <div className="about-us-content">
         <div>
-            <div className="about-us-header">O nas</div>
+            <div className="about-us-header">About us</div>
             <Decoration/>
             {/* <img src="./../assets/Decoration.svg" alt=""></img> */}
             <div className="about-us-text">Nori grape silver beet brocoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.</div>

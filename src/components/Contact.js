@@ -32,14 +32,14 @@ export default function Contact() {
 
         <form className="contact-form-section" onSubmit={handleSubmit}>
           <div className="contact-form-header">
-            <div>Skontaktuj się z nami</div>
+            <div>Contact us</div>
             <Decoration />
           </div>
 
           <div className="contact-form">
             <div className="contact-data">
               <div>
-                <div className="contact-data-personal">Wpisz swoje imię</div>
+                <div className="contact-data-personal">Enter your name</div>
                 <input
                   id="submit-text"
                   type="text"
@@ -51,7 +51,7 @@ export default function Contact() {
               </div>
 
               <div>
-                <div className="contact-data-personal">Wpisz swój email</div>
+                <div className="contact-data-personal">Enter your email</div>
                 <input
                   id="submit-text"
                   type="text"
@@ -64,7 +64,7 @@ export default function Contact() {
             </div>
 
             <div className="contact-message">
-              <div>Wpisz swoją wiadomość</div>
+              <div>Enter your message</div>
               <textarea
                 id="submit-message"
                 type="text"
