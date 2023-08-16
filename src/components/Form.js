@@ -31,7 +31,7 @@ export const Form = () => {
           <div className="form-header-header-section">
             <div className="header-div">
               <p>Give away the items you no longer need</p>
-              <p>POTRZEBUJĄCYM</p>
+              <p>TO THE PEOPLE IN NEED </p>
             </div>
             <div className="decoration-div">
               <Decoration />

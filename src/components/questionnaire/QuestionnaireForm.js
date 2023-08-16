@@ -23,33 +23,35 @@ const QuestionnaireForm = ({ activeSection, onSectionChange }) => {
       return (
         <>
           <div className="questionnaire-content">
-            <div className="form-steps-header">Zaznacz, co chcesz oddać:</div>
+            <div className="form-steps-header">
+              Tick ​​what you want to give back:
+            </div>
             <div className="form-steps-giveaway-options">
               <div className="form-steps-giveaway-picker">
                 <label class="checkbox">
                   <input type="checkbox" />
                   <span></span>
-                  ubrania, które nadają się do ponownego uzycia
+                  clothes that are reusable
                 </label>
                 <label class="checkbox">
                   <input type="checkbox" />
                   <span></span>
-                  ubrania do wyrzucenia
+                  clothes to throw away
                 </label>
                 <label class="checkbox">
                   <input type="checkbox" />
                   <span></span>
-                  zabawki
+                  toys
                 </label>
                 <label class="checkbox">
                   <input type="checkbox" />
                   <span></span>
-                  ksiązki
+                  books
                 </label>
                 <label class="checkbox">
                   <input type="checkbox" />
                   <span></span>
-                  inne
+                  others
                 </label>
               </div>
             </div>
@@ -66,18 +68,18 @@ const QuestionnaireForm = ({ activeSection, onSectionChange }) => {
         <>
           <div className="questionnaire-content">
             <div className="form-steps-header">
-              Podaj liczbę 60l worków, w które spakowałeś/aś rzeczy:
+              Enter the number of 60l bags in which you packed your items:
             </div>
             <div className="dropdown-section">
               <div className="dropdown">
                 <div className="dropdown-menu" onClick={toggleDropdown}>
                   <div className="dropdown-menu-title">
-                    <p>Liczba 60l worków:</p>
+                    <p>Number of 60l bags:</p>
                   </div>
                   <div className="dropdown-menu-btn">
                     <div className="dropdown-menu-text">
                       <p>
-                        {selectedValue !== null ? selectedValue : "- wybierz -"}
+                        {selectedValue !== null ? selectedValue : "- choose -"}
                       </p>
                     </div>
                     <div className="dropdown-menu-icon">

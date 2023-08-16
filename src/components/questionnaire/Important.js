@@ -6,10 +6,10 @@ const Important = ({ activeSection }) => {
       return (
         <div className="form-details">
           <div className="form-details-padding">
-            <div className="form-details-header">Ważne!</div>
+            <div className="form-details-header">Important!</div>
             <div className="form-details-content">
-              Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy
-              wiedzieć, komu najlepiej je przekazać.
+              Fill in the details of your belongings. This will help us to know
+              to whom it is best to give them.
             </div>
           </div>
         </div>
@@ -19,10 +19,10 @@ const Important = ({ activeSection }) => {
       return (
         <div className="form-details">
           <div className="form-details-padding">
-            <div className="form-details-header">Ważne!</div>
+            <div className="form-details-header">Important!</div>
             <div className="form-details-content">
-              Wszystkie rzeczy do oddania zapakuj w 60l worki. Dokładną
-              instrukcję, jak poprawnie spakować rzeczy, znajdziesz <a>TUTAJ</a>
+              Pack all items to be donated in 60l bags. Detailed instructions on
+              how to properly pack things can be found <a>HERE</a>
             </div>
           </div>
         </div>
@@ -32,11 +32,11 @@ const Important = ({ activeSection }) => {
       return (
         <div className="form-details">
           <div className="form-details-padding">
-            <div className="form-details-header">Ważne!</div>
+            <div className="form-details-header">Important!</div>
             <div className="form-details-content">
-              Jeśli wiesz komu chcesz pomóc, możesz wpisać nazwę tej organizacji
-              w wyszukiwarce. Możesz też filtrować organizacje po ich
-              lokalizacji bądź celu ich pomocy.
+              If you know who you want to help, you can enter the name of that
+              organization in the search engine. You can also filter
+              organizations by their location or purpose.
             </div>
           </div>
         </div>
@@ -46,9 +46,9 @@ const Important = ({ activeSection }) => {
       return (
         <div className="form-details">
           <div className="form-details-padding">
-            <div className="form-details-header">Ważne!</div>
+            <div className="form-details-header">Important!</div>
             <div className="form-details-content">
-              Podaj adres oraz termin odbioru rzeczy.
+              Enter the address and pick-up date.
             </div>
           </div>
         </div>
@@ -58,10 +58,10 @@ const Important = ({ activeSection }) => {
       return (
         <div className="form-details">
           <div className="form-details-padding">
-            <div className="form-details-header">Ważne!</div>
+            <div className="form-details-header">Important!</div>
             <div className="form-details-content">
-              Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy
-              wiedzieć, komu najlepiej je przekazać.
+              Fill in the details of your belongings. This will help us to know
+              to whom it is best to give them.
             </div>
           </div>
         </div>
