@@ -15,7 +15,7 @@ export const Logout = () => {
     <div className="signup-container">
       <div className="signup-logging-section">
         <div className="signup-header">
-          Wylogowanie nastąpiło pomyślnie
+          You've logged out successfully
           <div>
             <Decoration />
           </div>
@@ -26,7 +26,7 @@ export const Logout = () => {
             <Link to="../login">Zaloguj się</Link>
           </btn> */}
           <btn className="loggedout-btn">
-            <Link to="/">Strona główna</Link>
+            <Link to="/">Main page</Link>
           </btn>
         </div>
       </div>

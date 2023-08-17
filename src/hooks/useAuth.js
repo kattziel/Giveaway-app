@@ -1,5 +1,4 @@
-import React, { useState, createContext, useContext, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState, createContext, useContext } from "react";
 import { useLocalStorage } from "./useLocalStorage";
 
 const AuthContext = createContext(null);
@@ -15,7 +14,7 @@ export const AuthProvider = ({ children }) => {
     setUser(null);
   };
 
-  const signup = ({ user }) => {
+  const signup = (user) => {
     setUser(user);
   };
 

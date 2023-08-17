@@ -33,10 +33,10 @@ const Navigation = () => {
       {auth.user && (
         <div className="navigation-user-menu">
           <ul>
-            <li>Witaj, {auth.user}!</li>
-            <li className="give-away-btn">Oddaj rzeczy</li>
+            <li>Hello, {auth.user}!</li>
+            <li className="give-away-btn">Give away items</li>
             <li>
-              <Link to="/logout">Wyloguj</Link>
+              <Link to="/logout">Logout</Link>
             </li>
           </ul>
         </div>
@@ -90,7 +90,7 @@ const Navigation = () => {
               smooth={true}
               duration={500}
             >
-              Fundations and organizations
+              Foundations and organizations
             </ScrollLink>
           </li>
 

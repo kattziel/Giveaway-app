@@ -4,11 +4,13 @@ import { ReactComponent as Decoration } from "./../../assets/Decoration.svg";
 import { auth } from "../../firebase";
 import "../../scss/components_scss/Signup.scss";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-// import { useAuth } from "../../hooks/useAuth";
+import { useAuth } from "../../hooks/useAuth";
 
 export default function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+  const authentication = useAuth();
   // const [repeatedPassword, setRepeatedPassword] = useState("");
 
   const signupHandler = (e) => {
@@ -16,14 +18,14 @@ export default function Signup() {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log(userCredential);
+        navigate("/form");
+        authentication.signup(email, password);
       })
       .catch((error) => {
         console.log("You have got an error: ", error);
       });
   };
 
-  // const auth = useAuth();
-  // const navigate = useNavigate();
 
   // const handleSignup = () => {
   //   if (password === repeatedPassword) {
@@ -77,14 +79,11 @@ export default function Signup() {
           </div> */}
 
           <div className="signup-buttons">
-            <button
-              className="auth-btn"
-              type="submit"
-            >
+            <button className="auth-btn" type="submit">
               Sign up
             </button>
             <button className="auth-btn">
-              <Link to="../form">Log in</Link>
+              <Link to="../form">Already have an account?<br/>Log in</Link>
             </button>
           </div>
         </form>

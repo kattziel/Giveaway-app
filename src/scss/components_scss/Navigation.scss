@@ -9,19 +9,20 @@
   flex-direction: column;
   max-width: 100%;
   overflow: hidden;
-  padding-left: 1100px;
+  align-items: flex-end;
 }
 
 .navigation-page-menu ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   font-family: $font-base;
   color: $color-grey;
   font-size: 22px;
 
   li {
     line-height: 1.5em;
+    padding-right: 30px;
   }
 }
 
@@ -57,5 +58,5 @@ a {
 }
 
 .inactive-header-link span {
-  fontSize: 30px;
+  font-size: 30px;
 }

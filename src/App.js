@@ -23,7 +23,6 @@ import { Logout } from "./components/auth/Logout";
 // import { RequireAuth } from "./components/RequireAuth";
 
 function App() {
-  // const {,} = ...()
 
   return (
     <BrowserRouter>

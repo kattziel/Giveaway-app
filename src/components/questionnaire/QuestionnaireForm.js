@@ -28,27 +28,27 @@ const QuestionnaireForm = ({ activeSection, onSectionChange }) => {
             </div>
             <div className="form-steps-giveaway-options">
               <div className="form-steps-giveaway-picker">
-                <label class="checkbox">
+                <label className="checkbox">
                   <input type="checkbox" />
                   <span></span>
                   clothes that are reusable
                 </label>
-                <label class="checkbox">
+                <label className="checkbox">
                   <input type="checkbox" />
                   <span></span>
                   clothes to throw away
                 </label>
-                <label class="checkbox">
+                <label className="checkbox">
                   <input type="checkbox" />
                   <span></span>
                   toys
                 </label>
-                <label class="checkbox">
+                <label className="checkbox">
                   <input type="checkbox" />
                   <span></span>
                   books
                 </label>
-                <label class="checkbox">
+                <label className="checkbox">
                   <input type="checkbox" />
                   <span></span>
                   others
