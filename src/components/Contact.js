@@ -7,8 +7,7 @@ export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-
-  let submitMessageAlert;
+  const [showSubmitAlert, setShowSubmitAlert] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -17,10 +16,15 @@ export default function Contact() {
     console.log("Email:", email);
     console.log("Message:", message);
 
-    // Clear form fields by resetting state
     setName("");
     setEmail("");
     setMessage("");
+
+    setShowSubmitAlert(true);
+
+    setTimeout(() => {
+      setShowSubmitAlert(false);
+    }, 2000);
   };
 
   return (
@@ -74,10 +78,19 @@ export default function Contact() {
                 onChange={(e) => setMessage(e.target.value)}
               ></textarea>
             </div>
+            {showSubmitAlert && (
+              <div className="submit-message-alert">
+                Email was sent successfully! Thank you for your message.
+              </div>
+            )}
           </div>
-          <div className="submit-button-div">
-          <button type="submit" className="submit-button">Submit</button>
-          </div>
+          {!showSubmitAlert && (
+            <div className="submit-button-div">
+              <button type="submit" className="submit-button">
+                Submit
+              </button>
+            </div>
+          )}
         </form>
       </div>
     </Element>
