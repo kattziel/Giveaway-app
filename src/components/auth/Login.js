@@ -2,25 +2,29 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ReactComponent as Decoration } from "./../../assets/Decoration.svg";
 import "../../scss/components_scss/Login.scss";
+
+// firebase imports
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
-// import { useAuth } from "../../hooks/useAuth";
+import { useAuth } from "../../components/context/AuthContext";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const { login } = useAuth();
   const navigate = useNavigate();
-  // const authentication = useAuth();
 
-  const loginHandler = (e) => {
+  const loginHandler = async (e) => {
     e.preventDefault();
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        console.log(userCredential);
-      })
-      .catch((error) => {
-        console.log("You have got an error: ", error);
-      });
+    setError("");
+    try {
+      await login(email, password);
+      navigate("/");
+    } catch (e) {
+      console.log(e);
+      setError(e);
+    }
   };
 
   return (
@@ -57,7 +61,10 @@ export default function Login() {
               Log in
             </button>
             <button className="auth-btn">
-              <Link to="../signup">Don't have an account?<br/> Sign up</Link>
+              <Link to="../signup">
+                Don't have an account?
+                <br /> Sign up
+              </Link>
             </button>
           </div>
         </form>

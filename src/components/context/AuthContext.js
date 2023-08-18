@@ -26,13 +26,17 @@ export const AuthContextProvider = ({ children }) => {
     };
   }, []);
 
+  const login = (email, password) => {
+    return signInWithEmailAndPassword(auth, email, password);
+  };
+
   const logout = () => {
     return signOut(auth);
   };
   // function that returns signOut function from firebase auth + takes auth as an argument
 
   return (
-    <UserContext.Provider value={{ createUser, user, logout }}>
+    <UserContext.Provider value={{ createUser, user, login, logout }}>
       {children}
     </UserContext.Provider>
   );

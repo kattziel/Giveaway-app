@@ -2,6 +2,7 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ProtectedRoute from "./components/context/ProtectedRoute";
 
 // styles
 import "./App.css";
@@ -27,7 +28,7 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<Signup />} />
           <Route path="logout" element={<Logout />} />
-          <Route path="form" element={<Form />} />
+          <Route path="form" element={<ProtectedRoute><Form /></ProtectedRoute>} />
         </Routes>
       </AuthContextProvider>
     </BrowserRouter>
