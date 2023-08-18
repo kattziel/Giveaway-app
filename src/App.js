@@ -16,7 +16,6 @@ import { Form } from "./components/Form";
 import { Logout } from "./components/auth/Logout";
 
 import { AuthContextProvider } from "./components/context/AuthContext";
-// import { RequireAuth } from "./components/RequireAuth";
 
 function App() {
   return (

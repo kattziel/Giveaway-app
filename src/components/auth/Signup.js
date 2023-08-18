@@ -1,31 +1,29 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ReactComponent as Decoration } from "./../../assets/Decoration.svg";
-// import { auth } from "../../firebase";
-// import { UserAuth } from "../context/AuthContext";
+import { auth } from "../../firebase";
+import { useAuth } from "../context/AuthContext";
 import "../../scss/components_scss/Signup.scss";
 
 export default function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const { createUser } = useAuth();
   const navigate = useNavigate();
-  // const { createUser } = UserAuth();
   // const [repeatedPassword, setRepeatedPassword] = useState("");
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   setError("");
-  //   try {
-  //     await createUser(email, password);
-  //   } catch (e) {
-  //     setError(e.message);
-  //     console.log(e.message);
-  //   }
-  //   navigate("/form");
-  // };
-
-const handleSubmit = () => {};
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+    try {
+      await createUser(email, password);
+      navigate("/form");
+    } catch (e) {
+      console.log(e);
+      setError(e.message);
+    }
+  };
 
   return (
     <div className="signup-container">
