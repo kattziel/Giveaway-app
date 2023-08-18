@@ -45,7 +45,7 @@ const Navigation = () => {
             <li>Hello, {user.email}!</li>
             <li className="give-away-btn">Give away items</li>
             <li>
-              <button onClick={logoutHandler}>
+              <button className="logout-btn" onClick={logoutHandler}>
                 <Link to="/logout">Logout</Link>
               </button>
             </li>

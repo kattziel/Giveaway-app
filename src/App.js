@@ -17,8 +17,10 @@ import { Form } from "./components/Form";
 import { Logout } from "./components/auth/Logout";
 
 import { AuthContextProvider } from "./components/context/AuthContext";
+// import { useAuth } from "./components/context/AuthContext";
 
 function App() {
+  // const { user } = useAuth();
   return (
     <BrowserRouter>
       <AuthContextProvider>
@@ -28,7 +30,16 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<Signup />} />
           <Route path="logout" element={<Logout />} />
-          <Route path="form" element={<ProtectedRoute><Form /></ProtectedRoute>} />
+          {/* {user && ( */}
+            <Route
+              path="form"
+              element={
+                <ProtectedRoute>
+                  <Form />
+                </ProtectedRoute>
+              }
+            />
+          {/* )} */}
         </Routes>
       </AuthContextProvider>
     </BrowserRouter>

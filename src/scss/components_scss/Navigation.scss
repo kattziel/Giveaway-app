@@ -60,3 +60,15 @@ a {
 .inactive-header-link span {
   font-size: 30px;
 }
+
+.logout-btn {
+  background-color: transparent;
+  border: none;
+  // font-family: $font-base;
+  // font-size: 18px;
+  font-size: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  color: #fff;
+  font-size: 18px;
+}
