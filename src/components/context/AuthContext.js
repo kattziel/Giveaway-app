@@ -20,14 +20,19 @@ export const AuthContextProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       console.log(currentUser);
       setUser(currentUser);
-    })
+    });
     return () => {
       unsubscribe();
     };
   }, []);
 
+  const logout = () => {
+    return signOut(auth);
+  };
+  // function that returns signOut function from firebase auth + takes auth as an argument
+
   return (
-    <UserContext.Provider value={{ createUser, user }}>
+    <UserContext.Provider value={{ createUser, user, logout }}>
       {children}
     </UserContext.Provider>
   );

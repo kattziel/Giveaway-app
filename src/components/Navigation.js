@@ -1,18 +1,27 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 
-//styles
 import "../scss/components_scss/Navigation.scss";
 
 import { useAuth } from "../components/context/AuthContext";
 
-//function
 const Navigation = () => {
-  const { user } = useAuth();
+  const { user, logout } = useAuth();
   const location = useLocation();
+  const navigate = useNavigate();
   const isDisabled = (path) => {
     return location.pathname === "login" || location.pathname === "signup";
+  };
+  const logoutHandler = async (e) => {
+    e.preventDefault();
+    try {
+      await logout();
+      navigate("/logout");
+      console.log("You've been logged out successfully")
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   return (
@@ -36,7 +45,9 @@ const Navigation = () => {
             <li>Hello, {user.email}!</li>
             <li className="give-away-btn">Give away items</li>
             <li>
-              <Link to="/logout">Logout</Link>
+              <button onClick={logoutHandler}>
+                <Link to="/logout">Logout</Link>
+              </button>
             </li>
           </ul>
         </div>
