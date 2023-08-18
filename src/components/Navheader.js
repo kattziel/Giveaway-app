@@ -1,17 +1,16 @@
 //general
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { ReactComponent as Decoration } from "./../assets/Decoration.svg";
 import { Link as ScrollLink } from "react-scroll";
-// import { useAuth } from "../hooks/useAuth";
+import { useAuth } from "../components/context/AuthContext";
 
 //styles
 import "../scss/components_scss/Navheader.scss";
 
 //function
 export default function Navheader() {
-  const [user, setUser] = useState(false);
-  // const auth = useAuth();
+  const {user} = useAuth();
 
   return (
     <div className="navheader-container">

@@ -1,16 +1,15 @@
-//general
-import React, { useState } from "react";
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
-// import { useAuth } from "../hooks/useAuth";
 
 //styles
 import "../scss/components_scss/Navigation.scss";
 
+import { useAuth } from "../components/context/AuthContext";
+
 //function
 const Navigation = () => {
-  const [user, setUser] = useState(false);
-  // const auth = useAuth();
+  const { user } = useAuth();
   const location = useLocation();
   const isDisabled = (path) => {
     return location.pathname === "login" || location.pathname === "signup";
@@ -34,7 +33,7 @@ const Navigation = () => {
       {user && (
         <div className="navigation-user-menu">
           <ul>
-            <li>Hello, {user}!</li>
+            <li>Hello, {user.email}!</li>
             <li className="give-away-btn">Give away items</li>
             <li>
               <Link to="/logout">Logout</Link>
