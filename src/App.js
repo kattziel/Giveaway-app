@@ -1,11 +1,7 @@
 //general
 import React from "react";
 import { createRoot } from "react-dom/client";
-import {
-  BrowserRouter,
-  Route,
-  Routes,
-} from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 // styles
 import "./App.css";
@@ -16,17 +12,16 @@ import Login from "./components/auth/Login";
 import Signup from "./components/auth/Signup";
 import Navigation from "./components/Navigation";
 
-import { AuthProvider } from "./hooks/useAuth";
 import { Form } from "./components/Form";
 import { Logout } from "./components/auth/Logout";
 
+import { AuthContextProvider } from "./components/context/AuthContext";
 // import { RequireAuth } from "./components/RequireAuth";
 
 function App() {
-
   return (
     <BrowserRouter>
-      <AuthProvider>
+      <AuthContextProvider>
         <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -35,7 +30,7 @@ function App() {
           <Route path="logout" element={<Logout />} />
           <Route path="form" element={<Form />} />
         </Routes>
-      </AuthProvider>
+      </AuthContextProvider>
     </BrowserRouter>
   );
 }

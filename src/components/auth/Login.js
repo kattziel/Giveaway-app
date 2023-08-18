@@ -4,13 +4,13 @@ import { ReactComponent as Decoration } from "./../../assets/Decoration.svg";
 import "../../scss/components_scss/Login.scss";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
-import { useAuth } from "../../hooks/useAuth";
+// import { useAuth } from "../../hooks/useAuth";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const authentication = useAuth();
+  // const authentication = useAuth();
 
   const loginHandler = (e) => {
     e.preventDefault();
@@ -22,10 +22,6 @@ export default function Login() {
         console.log("You have got an error: ", error);
       });
   };
-  // const handleLogin = () => {
-  //   auth.login(user);
-  //   navigate("/");
-  // };
 
   return (
     <div className="login-container">

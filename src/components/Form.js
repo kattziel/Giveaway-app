@@ -1,5 +1,4 @@
 import React from "react";
-import { useAuth } from "../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 import { ReactComponent as Decoration } from "./../assets/Decoration.svg";
 
@@ -9,11 +8,9 @@ import Questionnaire from "./Questionnaire";
 import ContactUs from "./Contact";
 
 export const Form = () => {
-  const auth = useAuth();
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    auth.logout();
     navigate("/logout");
   };
 

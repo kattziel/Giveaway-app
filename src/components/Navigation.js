@@ -1,15 +1,16 @@
 //general
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
-import { useAuth } from "../hooks/useAuth";
+// import { useAuth } from "../hooks/useAuth";
 
 //styles
 import "../scss/components_scss/Navigation.scss";
 
 //function
 const Navigation = () => {
-  const auth = useAuth();
+  const [user, setUser] = useState(false);
+  // const auth = useAuth();
   const location = useLocation();
   const isDisabled = (path) => {
     return location.pathname === "login" || location.pathname === "signup";
@@ -17,7 +18,7 @@ const Navigation = () => {
 
   return (
     <div className="navigation-container">
-      {!auth.user && (
+      {!user && (
         <div className="navigation-user-menu">
           <ul>
             <li>
@@ -30,10 +31,10 @@ const Navigation = () => {
         </div>
       )}
 
-      {auth.user && (
+      {user && (
         <div className="navigation-user-menu">
           <ul>
-            <li>Hello, {auth.user}!</li>
+            <li>Hello, {user}!</li>
             <li className="give-away-btn">Give away items</li>
             <li>
               <Link to="/logout">Logout</Link>
@@ -44,15 +45,12 @@ const Navigation = () => {
 
       <div className="navigation-page-menu">
         <ul>
-
           <li>
             <Link to="/">Start</Link>
           </li>
 
-
-
           <li>
-           <ScrollLink
+            <ScrollLink
               activeClass="active"
               className="test1"
               to="test1"
@@ -63,8 +61,6 @@ const Navigation = () => {
               What is this about?
             </ScrollLink>
           </li>
-
-
 
           <li>
             <ScrollLink
@@ -79,8 +75,6 @@ const Navigation = () => {
             </ScrollLink>
           </li>
 
-
-
           <li>
             <ScrollLink
               activeClass="active"
@@ -94,8 +88,6 @@ const Navigation = () => {
             </ScrollLink>
           </li>
 
-
-
           <li>
             <ScrollLink
               activeClass="active"
@@ -108,9 +100,6 @@ const Navigation = () => {
               Contact
             </ScrollLink>
           </li>
-
-
-
         </ul>
       </div>
     </div>

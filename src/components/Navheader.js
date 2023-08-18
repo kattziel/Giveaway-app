@@ -1,16 +1,17 @@
 //general
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import { ReactComponent as Decoration } from "./../assets/Decoration.svg";
 import { Link as ScrollLink } from "react-scroll";
-import { useAuth } from "../hooks/useAuth";
+// import { useAuth } from "../hooks/useAuth";
 
 //styles
 import "../scss/components_scss/Navheader.scss";
 
 //function
 export default function Navheader() {
-  const auth = useAuth();
+  const [user, setUser] = useState(false);
+  // const auth = useAuth();
 
   return (
     <div className="navheader-container">
@@ -28,7 +29,7 @@ export default function Navheader() {
             <Decoration />
           </div>
           <div className="nav-buttons">
-            {auth.user ? (
+            {user ? (
               <Link to="form">
                 <button className="nav-btn">GIVE AWAY ITEMS</button>
               </Link>
@@ -37,7 +38,7 @@ export default function Navheader() {
                 <button className="nav-btn">GIVE AWAY ITEMS</button>
               </Link>
             )}
-            {auth.user ? (
+            {user ? (
               <Link to="form">
                 <button className="nav-btn">ORGANIZE A COLLECTION</button>
               </Link>

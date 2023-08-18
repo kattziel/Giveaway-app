@@ -1,13 +1,13 @@
-import React from 'react'
-import { useAuth } from '../hooks/useAuth'
-import { Navigate } from 'react-router-dom'
+// import React from 'react'
+// import { useAuth } from '../hooks/useAuth'
+// import { Navigate } from 'react-router-dom'
 
-export const RequireAuth = ({children}) => {
+// export const RequireAuth = ({children}) => {
 
-  const auth = useAuth()
+//   const auth = useAuth()
 
-    if (!auth.user) {
-        return <Navigate to="login"/>
-    }
-    return children
-}
+//     if (!auth.user) {
+//         return <Navigate to="login"/>
+//     }
+//     return children
+// }
